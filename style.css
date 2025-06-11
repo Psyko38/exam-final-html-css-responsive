@@ -112,7 +112,7 @@ main > .box:nth-child(4) > .img {
 	background-image: url(asset/Yuno.png);
 }
 
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 960px) {
 	.box {
 		grid-template-columns: 0.5fr 1fr;
 		grid-template-rows: none;
@@ -136,7 +136,7 @@ main > .box:nth-child(4) > .img {
 	}
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1440px) {
 	main {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
