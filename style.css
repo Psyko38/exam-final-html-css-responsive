@@ -1,0 +1,150 @@
+@import url(https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans:200,300,regular,500,600,700,800,200italic,300italic,italic,500italic,600italic,700italic,800italic);
+
+:root {
+	--Very_Dark_Grey_Blue: #1c202b;
+	--White: #ffffff;
+	--Blue: #0a327b;
+	--Dark_Grey_Blue: #5e6778;
+	--Grey_Blue: #939cad;
+	--Snow: #f7fafd;
+}
+
+* {
+	font-family: Plus Jakarta Sans;
+	margin: 0;
+	padding: 0;
+	/* Use this for better axperience : transition: 0.5s;*/
+}
+
+body {
+	background-color: var(--Snow);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 5vmin;
+}
+
+main {
+	gap: 3vmin;
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	grid-template-rows: auto;
+}
+
+.box {
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	gap: 2vmin;
+	border-radius: 5vmin;
+	overflow: hidden;
+	background-color: var(--White);
+	height: 100%;
+}
+
+.box > .img {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.box > div:last-child {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 2vmin;
+	gap: 2vmin;
+}
+
+.sInfo {
+	display: flex;
+	flex-direction: column;
+	gap: 3vmin;
+}
+
+.sInfo > h2 {
+	font-weight: 800;
+	font-size: 24px;
+	line-height: 100%;
+	letter-spacing: 0px;
+	color: var(--Very_Dark_Grey_Blue);
+}
+
+.sInfo > div {
+	display: flex;
+}
+
+.sInfo > div > p {
+	font-weight: 800;
+	font-size: 16px;
+	line-height: 100%;
+	letter-spacing: 0px;
+	color: var(--White);
+	background-color: var(--Blue);
+	padding: 3px;
+	border-radius: 3px;
+}
+
+.box > div > p {
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 100%;
+	letter-spacing: 0px;
+	color: var(--Dark_Grey_Blue);
+}
+
+.lastCo {
+	color: var(--Grey_Blue) !important;
+}
+
+main > .box:nth-child(1) > .img {
+	background-image: url(asset/Zoe.png);
+}
+
+main > .box:nth-child(2) > .img {
+	background-image: url(asset/Anouk.png);
+}
+
+main > .box:nth-child(3) > .img {
+	background-image: url(asset/Aicha.png);
+}
+
+main > .box:nth-child(4) > .img {
+	background-image: url(asset/Yuno.png);
+}
+
+@media screen and (min-width: 720px) {
+	.box {
+		grid-template-columns: 0.5fr 1fr;
+		grid-template-rows: none;
+		border-radius: 3vmin;
+	}
+
+	.sInfo {
+		gap: 3vmin;
+	}
+
+	.box > div:last-child {
+		gap: 3vmin;
+	}
+}
+
+@media screen and (min-width: 1080px) {
+	main {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: auto;
+		gap: 20vmin;
+	}
+
+	.box {
+		grid-template-columns: none;
+		grid-template-rows: 1fr 1fr;
+		gap: 3vmin;
+		border-radius: 2vmin;
+	}
+
+	.sInfo {
+		flex-direction: row;
+		align-items: center;
+	}
+}
